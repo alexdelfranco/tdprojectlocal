@@ -287,7 +287,7 @@ def process_fits(mockup,slice_dict,force_write=False):
         if force_write:
           # Remove that file and replace it with a new one
           path = add_backslash(path)
-          !rm {path}
+          os.system(rm {path})
         else:
           # Save to mockup image dict
           hdul = fits.open(path)
